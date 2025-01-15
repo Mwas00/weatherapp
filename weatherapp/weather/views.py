@@ -4,7 +4,7 @@ from django.shortcuts import render
 def get_weather(request):
     if request.method == 'POST':
         city = request.POST.get('city')
-        api_key = 'your_openweathermap_api_key'
+        api_key = ''
         url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
         
         response = requests.get(url)
